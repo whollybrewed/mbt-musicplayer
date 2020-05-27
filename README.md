@@ -45,7 +45,7 @@ Random generator and weighted random generator are both used to navigate paths i
 
 ### Test Cases
 * Test to ensure all vertices have the correct "Action" arguments in their states.
-```
+```java
 @Override
 public void v_FileReady(){
     assertEquals("ready", MusicAdapter.getState());
@@ -60,7 +60,7 @@ public void v_FilePaused(){
 }
 ``` 
 * Test the existence of the audio file when executing input "Open". Incorrect or non-existing file path will lead to failure. 
-```
+```java
 @Override
     public void e_Open(){
         MusicAdapter.open("C:\\MBT_HW2\\StarWars60.wav");
@@ -68,7 +68,7 @@ public void v_FilePaused(){
     }
 ```
 * Test whether the audio starts correctly at the beginning when executing input "Start". Failure occurs if the audio format is unsupported or the header is corrupted. 
-```
+```java
 @Override
 public void e_Start(){
     MusicAdapter.start();
@@ -76,7 +76,7 @@ public void e_Start(){
 }
 ```
 * Test whether the audio terminates and resets time position successfully when executing input "Stop".
-```
+```java
 @Override
 public void e_Stop(){
     MusicAdapter.stop();
@@ -84,7 +84,7 @@ public void e_Stop(){
 }
 ```
 * Test the procedure which the audio playback is paused by input "Pause" and then resumed by input "Resume", it is expected to play from the correct time position. System interrupt may lead to failure if it causes a time delay between "pause time" and "resume time". 
-```
+```java
 @Override
 public void e_Pause(){
     MusicAdapter.pause();
@@ -97,7 +97,7 @@ public void e_Resume(){
 }
 ```
 * Open music file and interact with playback features for 20 seconds
-```
+```java
 @Test
 public void stabilityTest() {
     new TestBuilder()
