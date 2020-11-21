@@ -1,5 +1,4 @@
 # Modeling and Model-based Testing with GraphWalker
-Written by Ander Lee
 ## Part 1
 The SUT in this report refers to the [Java Sound Technology](https://docs.oracle.com/javase/8/docs/technotes/guides/sound/index.html) API. This API mainly supports features of interaction with audio file, such as audio playback, audio capturing, audio processing and more. The emphasis of this model will be on the playback related functionalities, specifically the "Open", "Start", "Stop", "Pause", and "Resume" features of a single music file in WAV format. Table 1 shows the system inputs and their descriptions.
 
